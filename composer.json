@@ -1,0 +1,25 @@
+{
+    "name": "hhsnake/test-blog",
+    "type": "project",
+    "license": "proprietary",
+    "autoload": {
+        "psr-4": {
+            "TestBlog\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "hhsnake"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "doctrine/orm": "^2.20",
+        "symfony/cache": "^5.4",
+        "doctrine/annotations": "^2.0",
+        "doctrine/doctrine-bundle": "^2.13",
+        "doctrine/dbal": "^3.9",
+        "symfony/error-handler": "^5.4",
+        "monolog/monolog": "^2.10"
+    }
+}
