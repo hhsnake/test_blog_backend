@@ -35,7 +35,7 @@ class BlogController extends ApiController
         $blogRepository = $em->getRepository(Blog::class);
         $result = [];
         $totalCount = $blogRepository->count([]);
-        $query = $blogRepository->createQueryBuilder('b')->setFirstResult(($page - 1) * self::DEFAULT_LIMIT)->setMaxResults(self::DEFAULT_LIMIT);
+        $query = $blogRepository->createQueryBuilder('b')->setFirstResult(($page - 1) * self::DEFAULT_LIMIT)->setMaxResults(self::DEFAULT_LIMIT)->orderBy('b.id', 'ASC');
         $paginator = new Paginator($query, true);
         $c = count($paginator);
         /** @var Blog $blogRecord */
